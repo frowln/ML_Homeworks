@@ -27,7 +27,7 @@ class IrisKMeans:
             kmeans = KMeans(n_clusters=k, random_state=self.random_state).fit(self.X)
             inertias.append(kmeans.inertia_)
             silhouettes.append(silhouette_score(self.X, kmeans.labels_))
-        self.optimal_k = 3  # Автоматизацию можно добавить здесь
+        self.optimal_k = 3
         return self.optimal_k
 
     def custom_kmeans(self, k, max_iters=100):
